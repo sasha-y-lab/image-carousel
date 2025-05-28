@@ -1,0 +1,100 @@
+body{
+    
+    height: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#slider-container {
+    display: flex;
+width: 475px;
+overflow: hidden;
+justify-content: center;
+
+
+
+
+}
+
+#slider {
+    display: flex;
+    column-gap: 40px;
+    width: 950px;
+    
+}
+
+#overlay {
+    display: flex;
+   border-color: grey;
+    width: 600px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 20px;
+    border-style: solid;
+    -moz-border-radius: 8px; 
+    -webkit-border-radius: 8px; 
+    padding-bottom: 40px;
+    
+}
+
+#overlay::before {
+
+    content: "";
+    display: block;
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+    border-color: #fff;
+    border-width: 10px;
+    border-style: solid;
+    
+}
+
+
+
+.image-1 {
+background-image: url("./../images/patternmaking1.jpg");
+background-size: cover;
+width: 300px;
+height: 200px;
+}
+
+.image-2 {
+background-image: url("./../images/fabric1.jpg");
+background-size: cover;
+width: 300px;
+height: 200px;
+}
+
+.image-3 {
+background-image: url("./../images/sewing1.jpg");
+background-size: cover;
+width: 300px;
+height: 200px;
+}
+
+.image-1, .image-2, .image-3 {
+
+border-radius: 8px;
+border-style: none;
+
+}
+
+#nav-container {
+    width: 630px;
+    height: 50px;
+    background-color: grey;
+    margin-top: -50px;
+    border-radius: 8px;
+    z-index: 0;
+
+}
