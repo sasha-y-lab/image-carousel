@@ -160,3 +160,21 @@ circle3.addEventListener("mousedown", (e) => {
   
 // goes from side to side and clickable on navigation buttons
 
+// Add a timeout which advances the slides every 5 seconds.
+
+let slideIndex = 0;
+const slidePositions = [340, -5, -315]; // centered offsets for images
+const intervalTime = 5000; // 5 seconds
+
+function rotateSlides() {
+  // update slider position
+  x = slidePositions[slideIndex];
+  slider.style.transform = `translateX(${x}px)`;
+
+  // move to next slide
+  slideIndex++;
+  if (slideIndex > 2) slideIndex = 0;
+}
+
+// start rotation
+setInterval(rotateSlides, intervalTime);
