@@ -25,8 +25,12 @@ justify-content: center;
 #slider {
     display: flex;
     column-gap: 40px;
-    width: 950px;
+/* width: 950px; */
     position: relative;
+   
+  width: calc(340px * 3);         /* 3 slides * STEP */
+  height: 100%;
+  transition: none;
     
 }
 
@@ -122,4 +126,18 @@ border-style: none;
     z-index: 1;
     margin-top: 15px;
     position: relative;
+}
+
+.circle-divs {
+z-index: 1;
+      width: 20px;         /* Set equal width and height to form a square */
+  height: 20px;        /* Set equal width and height */
+  background-color: rgb(0, 113, 128); /* Add a background color to make it visible */
+  border-radius: 50%; /*makes it a circle from square*/
+  margin-top: 15px;
+}
+
+.photo-div {
+
+  flex-shrink: 0;
 }
