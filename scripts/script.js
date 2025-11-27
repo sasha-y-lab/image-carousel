@@ -29,6 +29,12 @@ const previousBtn = document.querySelector("#previous");
 
 const imagesArray = [img1, img2, img3];
 
+const STEP = 340;
+
+const STEP2 = -340;
+
+let x = 0;
+
 // there must be an easier way to switch forward then backward
 // without needing exact numbers
 
@@ -38,47 +44,19 @@ previousBtn.addEventListener("mousedown", (e) => {
 
   // here's where the slide moves
   // previous moves backwards or scrolls backwards
-//console.log(photosDiv.length);
- //photosDiv.forEach
-//if (e.target) {
-//let positionX = 350;
+
+
+  x += STEP;
+
+  slider.style.transform = `translateX(${x}px)`;
 
 
 
-
-for (let i = 0; i < imagesArray.length; i++) {
-
-console.log(imagesArray[i]);
-
-slider.translate = "350px";
-
-//slider.style.transform = `translateX(${imagesArray[1]})`;
-
-//alert(imagesArray[i]);
-
-}
 
 });
 
 
 
-//const speed = 2;
-
-//positionX += speed;
-   
-   // slider.style.transform = `translateX(${positionX}px)`;
- //console.log(positionX);
-
-  //  if (positionX === 350) {
-       // positionX = 100;
-//slider.style.transform = `translateX(${positionX}px)`;
-    //positionX = 250; 
-    //console.log(positionX);
-//if (positionX === 250){
-   // slider.style.transform = `translateX(${positionX}px)`;
-//}
-
- // }
 
  // if (positionX === 3) {
   // slider.style.transform = "translateX(50px)";
@@ -109,32 +87,9 @@ nextBtn.addEventListener("mousedown", (e) => {
 //console.log(slider.style.transform);
   // here's where the slide moves
   // next moves forwards or scrolls forwards
+    
+   x += STEP2;
 
-   for (let k = 0 ; k < imagesArray.length; k++) {
-
-console.log(imagesArray[k]);
-
-   }
-
-  //  if (photosDiv.length === 3) {
-
-   //     for (let i = 0; i <= photosDiv.length; i++) {
-   // slider.style.transform = "translateX(-316px)";
-   // i++;
-
-   // slider.style.transform = "translateX(-316px)";
-      //  }
-
-   // }
-
-
-   // img1.style.transform = "translate(-300px)";
-   // img2.style.transform = "translate(-300px)";
-   // img3.style.transform = "translate(-300px)";
-
-    //photosDiv.style.transform = "translate(-300px)";
-
-  //}
-
+  slider.style.transform = `translateX(${x}px)`;
 
 });
